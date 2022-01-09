@@ -1,0 +1,77 @@
+@import "./zero.scss";
+
+$bgColor: #C4C4C4;
+$text: #000000;
+
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  padding: 1rem;
+  margin: 0;
+  font-family: Comic, sans-serif;
+  background-color: $bgColor;
+  color: $text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  min-width: 320px;
+}
+
+.input {
+ width: 90%;
+ height: 50px;
+ font-size: 2rem;
+}
+
+.autocomplite-list,.saved-list {
+  width: 90%;
+}
+
+.autocomplite-list {
+  margin-bottom: 70px;
+}
+
+.autocomplite-list__item, .saved-list__item {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  overflow-x: hidden;
+}
+
+.autocomplite-list__item {
+  border: 2px solid black;
+  background-color: #E3E3E3;
+  cursor: pointer;
+}
+
+.autocomplite-list__item:hover {
+  background-color: #65CDF9;
+}
+
+.saved-list__item {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  background-color: #E27BEB;
+}
+
+.saved-list__info {
+  display: flex;
+  flex-flow: column;
+}
+
+.close-btn {
+  font-size: 65px;
+  color: red;
+  cursor: pointer;
+}
+
+.close-btn:active {
+  color: #000000;
+}
